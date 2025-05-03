@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box; /* Include padding/border in the element's total width/height */
+}
+
+.video-player-page {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1.5rem;
+  transition: margin-left 0.3s ease;
+  justify-content: space-between; /* Maintain space between children */
+  width: 100vw; /* Full width */
+  margin-top: calc(56px + 10px); /* Ensure there's no margin causing the layout issue */
+}
+
+.video-player-page.with-sidebar {
+  margin-left: 240px; /* Keep this for sidebar adjustment */
+}
+
+.video-player-page.no-sidebar {
+  margin-left: 0; /* No sidebar */
+}
+
+/* Main video area */
+.video-main {
+  flex: 1; /* Allow the main video area to take up remaining space */
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 500px; /* Adjusted video height */
+  border-radius: 10px;
+}
+
+.video-info-panel {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.video-info-panel h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.uploader {
+  color: gray;
+}
+
+.video-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.like-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comment-section {
+  margin-top: 2rem;
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comment-section button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comment {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Sidebar (recommended videos) */
+.video-sidebar {
+  flex: 0 0 28%; /* Sidebar takes up 28% of the width */
+  max-width: 28%; /* Optional, prevents excessive width */
+  overflow-y: auto;
+}
+
+.side-video {
+  display: flex;
+  margin-top: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-video-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-thumbnail {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.side-info {
+  max-width: 200px;
+}
+
+.side-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.side-uploader {
+  font-size: 0.875rem;
+  color: gray;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .video-player-page {
+    flex-direction: column;
+  }
+
+  .video-main {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .video-sidebar {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .side-thumbnail {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-frame iframe {
+    height: 350px; /* Make iframe height responsive */
+  }
+
+  .side-thumbnail {
+    width: 80px;
+    height: 60px; /* Adjust thumbnail size for mobile */
+  }
+
+  .side-title {
+    font-size: 0.9rem; /* Adjust title font size for mobile */
+  }
+}/* Sidebar (recommended videos) */
+.video-sidebar {
+  flex: 0 0 28%; /* Sidebar takes up 28% of the width */
+  max-width: 28%; /* Optional, prevents excessive width */
+  overflow-y: auto;
+}
+
+.side-video {
+  display: flex;
+  margin-top: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-video-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-thumbnail {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.side-info {
+  max-width: 200px;
+}
+
+.side-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.side-uploader {
+  font-size: 0.875rem;
+  color: gray;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .video-player-page {
+    flex-direction: column;
+  }
+
+  .video-main {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .video-sidebar {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .side-thumbnail {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-thumbnail {
+    width: 80px;
+    height: 60px; /* Adjust thumbnail size for mobile */
+  }
+
+  .side-title {
+    font-size: 0.9rem; /* Adjust title font size for mobile */
+  }
+}
+.comment {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+.comment span {
+  font-size: 0.8rem;
+  color: gray;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.comment-actions button {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.comment-actions button:hover {
+  background-color: #ddd;
+}
+
+.edit-input {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.save-btn {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336 !important;
+  color: white;
+}
+.video-description {
+  margin-top: 10px;
+  white-space: pre-wrap;
+}
+.toggle-description-btn {
+  color: #065fd4;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+}

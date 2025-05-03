@@ -1,0 +1,49 @@
+.user-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.avatar-circle {
+  width: 36px;
+  height: 36px;
+  background-color: #3ea6ff;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.avatar-circle:hover {
+  background-color: #1e88e5;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  width: 180px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.dropdown-menu > div {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-menu > div:hover {
+  background-color: #f1f1f1;
+}

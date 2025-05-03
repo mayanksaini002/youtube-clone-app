@@ -1,0 +1,136 @@
+.create-channel-container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  color: #0f0f0f;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.create-channel-container h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f0f0f;
+}
+
+.channel-avatar-upload {
+  margin-bottom: 30px;
+}
+
+.avatar-label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.avatar-placeholder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 42px;
+  line-height: 110px;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.avatar-placeholder:hover {
+  background-color: #cfcfcf;
+}
+
+.avatar-preview {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #111;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #3ea6ff;
+  outline: none;
+}
+
+.create-channel-btn {
+  margin-top: 25px;
+  background-color: #3ea6ff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.create-channel-btn:hover {
+  background-color: #1f8de8;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* ✅ Responsive for small screens */
+@media (max-width: 480px) {
+  .create-channel-container {
+    width: 90%;
+    margin: 60px auto;
+    padding: 24px;
+  }
+
+  .create-channel-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .avatar-placeholder,
+  .avatar-preview {
+    width: 90px;
+    height: 90px;
+    font-size: 34px;
+    line-height: 90px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .create-channel-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
